@@ -21,7 +21,7 @@ while(guessLeft>0):
             guessCorrect = True
 
     if hiddenWord.find("*")==-1:
-        print("Congratulation ",userName,", You have found the secret word!")
+        print("Congratulation ",userName,", You have found the secret word! ",hiddenWord)
         secretWordFound = True
         break
     
@@ -30,7 +30,7 @@ while(guessLeft>0):
     if guessCorrect:
         print("Good Guess! getting closer to the word!: ",hiddenWord)
     else:
-        print("Wrong Guess! Don't give up! ",guessLeft," more tries!: ",secretWord)   
+        print("Wrong Guess! Don't give up! ",guessLeft," more tries!: ",hiddenWord)   
     guessCorrect = False
 
 
