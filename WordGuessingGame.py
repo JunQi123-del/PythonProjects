@@ -24,15 +24,14 @@ while(guessLeft>0):
         print("Congratulation ",userName,", You have found the secret word! ",hiddenWord)
         secretWordFound = True
         break
-    
-    guessLeft-=1
 
     if guessCorrect:
         print("Good Guess! getting closer to the word!: ",hiddenWord)
     else:
         print("Wrong Guess! Don't give up! ",guessLeft," more tries!: ",hiddenWord)   
+    
     guessCorrect = False
-
+    guessLeft-=1
 
 if(secretWordFound==False):
     print("The secret word is: ",secretWord," , Better luck next time")
