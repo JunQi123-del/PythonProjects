@@ -45,6 +45,8 @@ def checkListforNumber():
     else:
         return False
 
+#starting code
+
 print("Starting: ")
 
 if(playerStartFirst=="Y"):
@@ -54,6 +56,8 @@ if(playerStartFirst=="Y"):
             break
         else:
             computersTurn()
+            if(checkConsecutiveNumber(listOfNumbers)):
+                break
 else:
      while(True):
         computersTurn()
@@ -61,4 +65,6 @@ else:
             break
         else:
          playersTurn()
+        if(checkConsecutiveNumber(listOfNumbers)):
+            break
 
