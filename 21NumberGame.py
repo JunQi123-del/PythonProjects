@@ -1,5 +1,6 @@
 import random
 
+
 playerStartFirst = input("Does the player wants to start first? (Y/N): ")
 listOfNumbers = []
 
@@ -11,7 +12,7 @@ def playersTurn():
     for i in range(numOfNumbers):
         userNumber = int(input())
         while (userNumber in listOfNumbers):
-            print("The number ",userNumber," is already in the list, please enter another number: ")
+            print("The number {} is already in the list, please enter another number: ".format(userNumber))
             userNumber = int(input())
         listOfNumbers.append(userNumber)
     listOfNumbers.sort()
@@ -21,6 +22,11 @@ def playersTurn():
         print("Player win!")
             
 def checkConsecutiveNumber(number):
+     """
+     This functions checks for consequtive number from 1 - 20 in a list
+     if it returns true means that user or computer has guessed all the numbers and 
+     won the game.
+     """
      return number==list(range(1,20+1))
 
 def computersTurn():
