@@ -35,3 +35,13 @@ def runningSum(self, nums):
             returnList.append(sumOfNumber)
             sumOfNumber=0
         return returnList
+
+#or 
+
+def runningSum1(self, nums):
+        result = []
+        sum = 0
+        for i in nums:
+            sum+=i
+            result.append(sum)
+        return result
